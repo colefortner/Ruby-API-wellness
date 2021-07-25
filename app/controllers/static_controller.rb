@@ -3,3 +3,4 @@ class StaticController < ApplicationController
 		render json: { status: "It's working" }
 	end
 end
+
