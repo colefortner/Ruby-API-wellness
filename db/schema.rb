@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_07_191752) do
+ActiveRecord::Schema.define(version: 2021_08_07_215936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "daily_data", force: :cascade do |t|
+    t.date "date"
+    t.integer "weight"
+    t.integer "unplug"
+    t.integer "wake"
+    t.integer "sleep"
+    t.string "blood_pressure1"
+    t.string "blood_pressure2"
+    t.string "blood_pressure3"
+    t.integer "meditation"
+  end
 
   create_table "foods", force: :cascade do |t|
     t.string "food_name"
