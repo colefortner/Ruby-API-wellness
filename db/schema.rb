@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_08_07_215936) do
 
   create_table "daily_data", force: :cascade do |t|
     t.date "date"
-    t.integer "weight"
+    t.float "weight"
     t.integer "unplug"
     t.integer "wake"
     t.integer "sleep"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2021_08_07_215936) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "first_name"
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false

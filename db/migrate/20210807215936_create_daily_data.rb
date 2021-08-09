@@ -2,7 +2,7 @@ class CreateDailyData < ActiveRecord::Migration[6.1]
   def change
     create_table :daily_data do |t|
       t.date :date
-      t.integer :weight
+      t.float :weight
       t.integer :unplug
       t.integer :wake
       t.integer :sleep

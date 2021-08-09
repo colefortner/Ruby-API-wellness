@@ -1,6 +1,7 @@
 class DailyDataController < ApplicationController
   def index
-    daily_datum = DailyDatum.all
+    daily_datum = DailyDatum.select(:weight, :date)
+    # daily_datum = DailyDatum.all 
     render json: {
       daily_datum: daily_datum
     }
